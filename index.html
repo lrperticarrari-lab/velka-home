@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Velka Home | Beleza e Funcionalidade</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@200;300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Syncopate', 'sans-serif'],
+                        body: ['Manrope', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        stone: '#E3E1DC',
+                        dark: '#121212',
+                        accent: '#374336',
+                        accentLight: '#4d5c4b',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP / Lenis / Lucide -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 flex flex-col">
+        <!-- Top Bar -->
+        <div class="bg-accent text-stone text-[10px] md:text-xs font-mono uppercase tracking-widest py-2 text-center w-full">
+            Compre com segurança e frete grátis via Amazon Prime
+        </div>
+        
+        <!-- Navbar -->
+        <nav id="navbar" class="glass-nav w-full px-6 md:px-12 py-5 flex justify-between items-center text-white transition-all duration-300">
+            <!-- Left: Logo -->
+            <a href="#" class="font-display font-bold text-xl md:text-2xl tracking-tighter hover:text-white/80 transition-colors">
+                VELKA HOME
+            </a>
+
+            <!-- Center: Links (Desktop) -->
+            <div class="hidden md:flex items-center gap-10 font-body text-sm font-medium">
+                <a href="#" class="nav-link text-white/90 hover:text-white">Início</a>
+                <a href="#" class="nav-link text-white/90 hover:text-white">Cozinha</a>
+                <a href="#" class="nav-link text-white/90 hover:text-white">Organização</a>
+                <a href="#" class="nav-link text-white/90 hover:text-white">Iluminação</a>
+                <a href="#" class="nav-link text-white/90 hover:text-white">Contato</a>
+            </div>
+
+            <!-- Right: Search & Amazon -->
+            <div class="hidden md:flex items-center gap-6">
+                <button class="text-white hover:text-white/70 transition-colors" aria-label="Buscar">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-widest border border-white/20 rounded-full px-5 py-2.5 hover:bg-white hover:text-dark transition-all duration-300">
+                    Nossa Loja na Amazon
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-white" aria-label="Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-[100svh] w-full flex flex-col justify-center overflow-hidden bg-[#0A0A0A]">
+        
+        <!-- Ambient Floating Blobs (from Design System) -->
+        <div class="hero-blob w-[50vw] h-[50vw] md:w-[35vw] md:h-[35vw] bg-accent/20 top-[-15%] left-[-10%]" style="animation: heroFloat1 18s ease-in-out infinite;"></div>
+        <div class="hero-blob w-[40vw] h-[40vw] md:w-[25vw] md:h-[25vw] bg-stone/10 bottom-[5%] right-[-8%]" style="animation: heroFloat2 14s ease-in-out infinite;"></div>
+
+        <!-- Image Background with Parallax + Masked Fade -->
+        <div class="absolute inset-0 z-0 w-full h-full overflow-hidden" style="mask-image: linear-gradient(180deg, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(180deg, black 50%, transparent 100%);">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Velka Home - Premium Minimalist Interior" 
+                 class="w-full h-[120%] object-cover object-[center_30%] hero-img opacity-40 origin-center scale-[1.02]">
+        </div>
+        
+        <!-- Gradient Overlays -->
+        <div class="absolute inset-0 z-[1] bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent w-full md:w-[75%] pointer-events-none"></div>
+        <div class="absolute inset-0 z-[1] bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/30 pointer-events-none"></div>
+
+        <!-- Content Layout -->
+        <div class="relative z-10 w-full max-w-[1600px] px-6 md:px-12 lg:px-20 mx-auto flex flex-col lg:flex-row items-center justify-between">
+            
+            <!-- Left Content -->
+            <div class="w-full lg:w-[60%] flex flex-col items-start text-left">
+                
+                <!-- Glass Badge -->
+                <div class="hero-fade mb-10 inline-flex items-center gap-3 bg-white/[0.04] backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/[0.08] shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_12px_rgba(55,67,54,0.6)]"></span>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/80 font-bold">Essenciais de Casa</span>
+                </div>
+
+                <!-- H1 Headline -->
+                <h1 class="font-display text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] font-bold uppercase tracking-tighter mb-2 leading-[0.85] text-white">
+                    <span class="split-animate block">Beleza &</span>
+                    <span class="split-animate block text-white/80 font-body font-extralight italic lowercase tracking-normal mt-2 md:mt-3">funcionalidade</span>
+                </h1>
+                
+                <!-- Accent line + tagline -->
+                <div class="hero-fade flex items-center gap-4 mb-10 mt-4">
+                    <div class="w-12 h-[1px] bg-accent"></div>
+                    <span class="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/40">Em cada detalhe</span>
+                </div>
+
+                <!-- Subhead -->
+                <p class="hero-fade font-body text-base md:text-xl font-light text-white/50 mb-14 max-w-xl leading-relaxed">
+                    Design inteligente para simplificar sua rotina. Transforme cada espaço da sua casa com utilidades práticas, bonitas e feitas para durar.
+                </p>
+
+                <!-- Call to Actions -->
+                <div class="hero-fade flex flex-col sm:flex-row gap-6 items-center justify-start w-full sm:w-auto">
+                    
+                    <!-- Primary: Border Beam Button -->
+                    <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="group relative z-10 flex items-center justify-center overflow-hidden rounded-full p-[1px] leading-none w-full sm:w-auto shadow-[0_0_30px_-8px_rgba(55,67,54,0.3)] hover:shadow-[0_0_50px_-10px_rgba(55,67,54,0.5)] transition-all duration-500 hover:-translate-y-0.5">
+                        <span class="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_340deg,#374336_360deg)]"></span>
+                        <span class="relative flex h-full w-full items-center justify-center rounded-full bg-[#0A0A0A] backdrop-blur-xl px-8 py-4 ring-1 ring-white/[0.06]">
+                            <span class="absolute inset-0 overflow-hidden rounded-full pointer-events-none">
+                                <span class="absolute top-0 left-0 h-full w-full -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:animate-[shimmer-light_1.5s_infinite] group-hover:opacity-100"></span>
+                            </span>
+                            <span class="relative z-10 flex items-center gap-3">
+                                <span class="font-mono text-[11px] font-bold tracking-widest text-white uppercase">VER LOJA NA AMAZON</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-white/60 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+                            </span>
+                        </span>
+                    </a>
+                    
+                    <!-- Secondary: Glass Play Button -->
+                    <a href="#mais-vendidos" class="group relative flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-white/[0.08] hover:border-white/30 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.15)] w-full sm:w-auto">
+                        <!-- Shimmer internal glow -->
+                        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none"></div>
+                        
+                        <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-white/70 group-hover:text-white transition-colors font-bold z-10">MAIS VENDIDOS</span>
+                        
+                        <!-- Animated Icon Container -->
+                        <div class="relative flex items-center justify-center w-6 h-6 rounded-full bg-white/10 group-hover:bg-white text-white group-hover:text-dark transition-all duration-500 z-10 overflow-hidden ml-1">
+                            <i data-lucide="arrow-down" class="absolute w-3 h-3 transition-transform duration-500 group-hover:translate-y-6"></i>
+                            <i data-lucide="arrow-down" class="absolute w-3 h-3 -translate-y-6 transition-transform duration-500 group-hover:translate-y-0"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content: Floating Feature Card (Desktop only) -->
+            <div class="hidden lg:flex w-[35%] justify-end">
+                <div class="hero-fade bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8 border border-white/[0.06] w-[300px] hover:-translate-y-4 transition-all duration-700 hover:bg-white/[0.06] hover:border-white/[0.12] cursor-default shadow-[0_20px_50px_-15px_rgba(0,0,0,0.5)] group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none"></div>
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center border border-accent/10">
+                            <i data-lucide="award" class="w-5 h-5 text-white/70"></i>
+                        </div>
+                        <span class="font-mono text-[10px] uppercase text-white/30 tracking-widest font-bold mt-2">Destaque</span>
+                    </div>
+                    <h4 class="font-display text-white text-lg font-bold tracking-tight mb-3">📦 ORGANIZAÇÃO INTELIGENTE</h4>
+                    <p class="font-body text-white/40 text-xs leading-relaxed mb-6">Kits herméticos, organizadores de gaveta e soluções práticas para otimizar cada cantinho.</p>
+                    <div class="w-full h-[1px] bg-gradient-to-r from-white/10 to-transparent mb-5"></div>
+                    <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-[10px] font-mono text-white/50 tracking-widest uppercase hover:text-white transition-colors w-max group/link">
+                        VER SELEÇÃO <i data-lucide="chevron-right" class="w-3 h-3 group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-20 opacity-0 hero-fade flex flex-col items-center">
+            <span class="font-mono text-[9px] uppercase tracking-[0.3em] text-white/30 mb-3 font-bold">Scroll</span>
+            <div class="w-[1px] h-10 md:h-14 bg-white/10 relative overflow-hidden">
+                <div class="w-full h-1/3 bg-white/60 absolute top-0 animate-[scrolldown_1.5s_ease-in-out_infinite]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CATEGORIAS -->
+    <section class="py-24 px-6 md:px-12 lg:px-20 bg-stone w-full">
+        <div class="max-w-[1600px] mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-up">
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-2 tracking-tight">Transforme sua rotina com organização</h2>
+                    <p class="font-body text-dark/60 font-light">Encontre a solução certa para cada ambiente</p>
+                </div>
+                <div class="hidden md:flex items-center gap-4 mt-6 md:mt-0">
+                    <button id="categoriasPrev" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-stone transition-colors cursor-hover">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="categoriasNext" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-stone transition-colors cursor-hover">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categories Grid/Carousel -->
+            <div id="categoriasCarouselContainer" class="flex overflow-x-auto gap-6 md:gap-8 pb-12 snap-x hide-scrollbar px-4 md:px-0" style="scrollbar-width: none;">
+
+                <!-- Cat 1 -->
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] w-[280px] md:min-w-[0] md:flex-1 group cursor-hover snap-center relative p-[1px] rounded-[1.25rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] reveal-up" style="transition-delay: 0.0s;">
+                    
+                    <!-- Spinning Border Beam (Visible on Hover) -->
+                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,rgba(0,0,0,0.25)_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-full"></span>
+                    
+                    <!-- Card Background and Flashlight Effect -->
+                    <div class="relative w-full h-full flex flex-col bg-white z-10 flashlight-card-light overflow-hidden rounded-[1.25rem] ring-1 ring-black/5" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        
+                        <!-- Internal Gradient / Subtle Background Texture -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-stone-50 to-stone-100 opacity-50 pointer-events-none"></div>
+
+                        <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                            
+                            <!-- Premium Image Animation: zoom on hover, subtle floating -->
+                            <img src="img/categorias/potes-hermeticos.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Cozinha e Servir">
+                            
+                            <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
+                                <span class="font-body text-xs md:text-sm text-dark font-semibold tracking-wider uppercase z-10">Cozinha e Servir</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cat 2 -->
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] w-[280px] md:min-w-[0] md:flex-1 group cursor-hover snap-center relative p-[1px] rounded-[1.25rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] reveal-up" style="transition-delay: 0.15s;">
+                    
+                    <!-- Spinning Border Beam (Visible on Hover) -->
+                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,rgba(0,0,0,0.25)_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-full"></span>
+                    
+                    <!-- Card Background and Flashlight Effect -->
+                    <div class="relative w-full h-full flex flex-col bg-white z-10 flashlight-card-light overflow-hidden rounded-[1.25rem] ring-1 ring-black/5" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        
+                        <!-- Internal Gradient / Subtle Background Texture -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-stone-50 to-stone-100 opacity-50 pointer-events-none"></div>
+
+                        <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                            
+                            <!-- Premium Image Animation: zoom on hover, subtle floating -->
+                            <img src="img/categorias/gaveta-quarto.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Organização Inteligente">
+                            
+                            <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
+                                <span class="font-body text-xs md:text-sm text-dark font-semibold tracking-wider uppercase z-10">Organização Inteligente</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cat 3 -->
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] w-[280px] md:min-w-[0] md:flex-1 group cursor-hover snap-center relative p-[1px] rounded-[1.25rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] reveal-up" style="transition-delay: 0.3s;">
+                    
+                    <!-- Spinning Border Beam (Visible on Hover) -->
+                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,rgba(0,0,0,0.25)_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-full"></span>
+                    
+                    <!-- Card Background and Flashlight Effect -->
+                    <div class="relative w-full h-full flex flex-col bg-white z-10 flashlight-card-light overflow-hidden rounded-[1.25rem] ring-1 ring-black/5" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        
+                        <!-- Internal Gradient / Subtle Background Texture -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-stone-50 to-stone-100 opacity-50 pointer-events-none"></div>
+
+                        <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                            
+                            <!-- Premium Image Animation: zoom on hover, subtle floating -->
+                            <img src="img/categorias/Cesto-roupa.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Essenciais de Casa">
+                            
+                            <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
+                                <span class="font-body text-xs md:text-sm text-dark font-semibold tracking-wider uppercase z-10">Essenciais de Casa</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Cat 4 -->
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] w-[280px] md:min-w-[0] md:flex-1 group cursor-hover snap-center relative p-[1px] rounded-[1.25rem] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] reveal-up" style="transition-delay: 0.44999999999999996s;">
+                    
+                    <!-- Spinning Border Beam (Visible on Hover) -->
+                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,rgba(0,0,0,0.25)_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-full"></span>
+                    
+                    <!-- Card Background and Flashlight Effect -->
+                    <div class="relative w-full h-full flex flex-col bg-white z-10 flashlight-card-light overflow-hidden rounded-[1.25rem] ring-1 ring-black/5" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        
+                        <!-- Internal Gradient / Subtle Background Texture -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-stone-50 to-stone-100 opacity-50 pointer-events-none"></div>
+
+                        <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                            
+                            <!-- Premium Image Animation: zoom on hover, subtle floating -->
+                            <img src="img/categorias/camping-lazer.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Viagem e Lazer">
+                            
+                            <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
+                                <span class="font-body text-xs md:text-sm text-dark font-semibold tracking-wider uppercase z-10">Viagem e Lazer</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MAIS VENDIDOS -->
+    <section id="mais-vendidos" class="py-24 px-6 md:px-12 lg:px-20 bg-stone w-full border-t border-dark/5">
+        <div class="max-w-[1600px] mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-up">
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-2 tracking-tight">Mais Vendidos</h2>
+                    <p class="font-body text-dark/60 font-light">Os produtos favoritos para facilitar o seu dia a dia.</p>
+                </div>
+                <div class="hidden md:flex items-center gap-4 mt-6 md:mt-0">
+                    <button id="maisVendidosPrev" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-stone transition-colors cursor-hover">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="maisVendidosNext" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-stone transition-colors cursor-hover">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Carousel -->
+            <div class="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-12 pt-4 reveal-up" id="maisVendidosCarouselContainer" style="scrollbar-width: none;">
+                <a href="https://www.amazon.com.br/dp/B0GMYJWM3" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Suporte Pia/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia em Aço Carbono Preto">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Suporte Pia/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 1" onerror="this.src='img/produtos/Suporte Pia/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Suporte Pia/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 2" onerror="this.src='img/produtos/Suporte Pia/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Organizador de Pia em Aço Carbono Preto</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 34,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GTRF5MSZ" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Chaleira Infusor/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Chaleira de Vidro Borossilicato 950ml com Infusor">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Chaleira Infusor/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 1" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Chaleira Infusor/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 2" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Chaleira de Vidro Borossilicato 950ml com Infusor</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 39,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GMXNDW4C" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Potes Herméticos Tampa Bambu/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Pote Hermético 1L de Vidro Borossilicato">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Potes Herméticos Tampa Bambu/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 1" onerror="this.src='img/produtos/Potes Herméticos Tampa Bambu/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Potes Herméticos Tampa Bambu/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 2" onerror="this.src='img/produtos/Potes Herméticos Tampa Bambu/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Pote Hermético 1L de Vidro Borossilicato</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 27,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GMY4QYJY" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Dispenser Alimentos e Sabão/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 2 Potes Herméticos 1,5L com Medidor">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Dispenser Alimentos e Sabão/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 1" onerror="this.src='img/produtos/Dispenser Alimentos e Sabão/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Dispenser Alimentos e Sabão/1.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 2" onerror="this.src='img/produtos/Dispenser Alimentos e Sabão/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Kit 2 Potes Herméticos 1,5L com Medidor</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 39,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GT76NBV8" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Petisqueira/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Petisqueira Bambu 25cm 5 Divisórias">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Petisqueira/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 1" onerror="this.src='img/produtos/Petisqueira/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Petisqueira/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 2" onerror="this.src='img/produtos/Petisqueira/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Petisqueira Bambu 25cm 5 Divisórias</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 64,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GMYDZTTD" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Escorredor Talheres/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Escorredor Porta Talheres Inox">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Escorredor Talheres/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 1" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Escorredor Talheres/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 2" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Escorredor Porta Talheres Inox</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 34,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GR6GRLXV" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Kit organizadores gaveta/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Gavetas Modular Transparente">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Kit organizadores gaveta/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 1" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Kit organizadores gaveta/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 2" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Organizador de Gavetas Modular Transparente</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 39,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/dp/B0GPF7FFXF" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)] flashlight-card-light" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <!-- Premium Shimmer -->
+                    <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer-light_1.5s_infinite] pointer-events-none z-30 rounded-[2rem] overflow-hidden"></div>
+                    
+                    <!-- Inner Image Slider -->
+                    <div class="w-full aspect-square bg-[#F9F9F9] relative overflow-hidden group/slider border-b border-dark/5">
+                        <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar" style="scrollbar-width: none;" onscroll="
+                            const index = Math.round(this.scrollLeft / this.clientWidth);
+                            const dots = this.parentElement.querySelectorAll('.dot');
+                            dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
+                        ">
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Organizador de ovos/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Porta Ovos 32un Gavetas Deslizantes">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Organizador de ovos/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 1" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
+                            </div>
+                            <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
+                                <img src="img/produtos/Organizador de ovos/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 2" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Carousel Arrows -->
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.scrollBy({left: -280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-left" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow opacity-0 group-hover/slider:opacity-100 transition-opacity z-40 hover:scale-110 hover:bg-white" onclick="event.preventDefault(); event.stopPropagation(); this.previousElementSibling.previousElementSibling.scrollBy({left: 280, behavior: 'smooth'})">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-dark"></i>
+                        </button>
+                        
+                        <!-- Dots -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-40 pointer-events-none">
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 1"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                            <div class="dot w-1.5 h-1.5 rounded-full bg-dark transition-opacity" style="opacity: 0.2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-6 bg-white flex flex-col flex-1 h-[200px] z-10">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Porta Ovos 32un Gavetas Deslizantes</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-auto">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-xl text-dark">R$ 49,90</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110 group-hover:shadow-lg">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    <!-- SECTION 4: CARROSSEL DIA DAS MÃES -->
+    <section class="w-full relative overflow-hidden bg-stone border-t border-dark/5 reveal-up">
+        <!-- Carousel Container -->
+        <div id="mothersDayCarousel" class="flex w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth">
+            
+            <!-- Slide 1 -->
+            <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
+                <img src="https://images.unsplash.com/photo-1475609471617-0ef53b59cff5?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-700"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
+                
+                <div class="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-24">
+                    <!-- Left: Title -->
+                    <div class="text-white pt-12 md:pt-0 drop-shadow-md flex flex-col items-center md:items-start w-full md:w-auto">
+                        <span class="block font-display text-xl md:text-3xl font-medium tracking-[0.3em] mb-1">DIA DAS</span>
+                        <span class="block font-display text-4xl md:text-6xl font-bold tracking-[0.4em] ml-1">MÃES</span>
+                    </div>
+                    
+                    <!-- Right: Copy & CTA -->
+                    <div class="text-white flex flex-col items-center md:items-end pb-12 md:pb-0 drop-shadow-md w-full md:w-auto">
+                        <p class="font-body text-xl md:text-3xl font-light mb-5 max-w-lg leading-[1.2] text-center md:text-right">
+                            Kits para deixar bons momentos <span class="font-display italic font-medium tracking-wide">mais leves</span>
+                        </p>
+                        <a href="#" class="px-8 py-3 rounded-full border border-white text-white font-mono text-[10px] uppercase tracking-[0.2em] hover:bg-white hover:text-dark transition-colors backdrop-blur-sm">
+                            Presentear
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
+                <img src="https://images.unsplash.com/photo-1494451930944-8998635c2123?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-700"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
+                
+                <div class="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-24">
+                    <!-- Left: Title -->
+                    <div class="text-white pt-12 md:pt-0 drop-shadow-md flex flex-col items-center md:items-start w-full md:w-auto">
+                        <span class="block font-display text-xl md:text-3xl font-medium tracking-[0.3em] mb-1">DIA DAS</span>
+                        <span class="block font-display text-4xl md:text-6xl font-bold tracking-[0.4em] ml-1">MÃES</span>
+                    </div>
+                    
+                    <!-- Right: Copy & CTA -->
+                    <div class="text-white flex flex-col items-center md:items-end pb-12 md:pb-0 drop-shadow-md w-full md:w-auto">
+                        <p class="font-body text-xl md:text-3xl font-light mb-5 max-w-lg leading-[1.2] text-center md:text-right">
+                            Com ela, tudo ganha <span class="font-display italic font-medium tracking-wide">outro sentido</span>
+                        </p>
+                        <a href="#" class="px-8 py-3 rounded-full border border-white text-white font-mono text-[10px] uppercase tracking-[0.2em] hover:bg-white hover:text-dark transition-colors backdrop-blur-sm">
+                            Ver Coleção
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
+                <img src="img/dia_das_maes_cozy.png" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-700"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
+                
+                <div class="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-24">
+                    <!-- Left: Title -->
+                    <div class="text-white pt-12 md:pt-0 drop-shadow-md flex flex-col items-center md:items-start w-full md:w-auto">
+                        <span class="block font-display text-xl md:text-3xl font-medium tracking-[0.3em] mb-1">DIA DAS</span>
+                        <span class="block font-display text-4xl md:text-6xl font-bold tracking-[0.4em] ml-1">MÃES</span>
+                    </div>
+                    
+                    <!-- Right: Copy & CTA -->
+                    <div class="text-white flex flex-col items-center md:items-end pb-12 md:pb-0 drop-shadow-md w-full md:w-auto">
+                        <p class="font-body text-xl md:text-3xl font-light mb-5 max-w-lg leading-[1.2] text-center md:text-right">
+                            O detalhe perfeito para quem <span class="font-display italic font-medium tracking-wide">cuida de tudo</span>
+                        </p>
+                        <a href="#" class="px-8 py-3 rounded-full border border-white text-white font-mono text-[10px] uppercase tracking-[0.2em] hover:bg-white hover:text-dark transition-colors backdrop-blur-sm">
+                            Explorar Kits
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button id="btnPrev" class="absolute top-1/2 -translate-y-1/2 left-2 md:left-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md flex items-center justify-center text-white transition-all z-20">
+            <i data-lucide="chevron-left" class="w-5 h-5 md:w-6 md:h-6"></i>
+        </button>
+        <button id="btnNext" class="absolute top-1/2 -translate-y-1/2 right-2 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-md flex items-center justify-center text-white transition-all z-20">
+            <i data-lucide="chevron-right" class="w-5 h-5 md:w-6 md:h-6"></i>
+        </button>
+        
+        <!-- Dots -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            <button class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity carousel-dot" aria-label="Slide 1"></button>
+            <button class="w-2 h-2 rounded-full bg-white opacity-40 transition-opacity carousel-dot" aria-label="Slide 2"></button>
+            <button class="w-2 h-2 rounded-full bg-white opacity-40 transition-opacity carousel-dot" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- SECTION 5: KITS ESSENCIAIS -->
+    <section class="py-24 px-6 md:px-12 lg:px-20 bg-stone w-full reveal-up">
+        <div class="max-w-[1600px] mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight text-dark mb-4">Casa & Organização</h2>
+                    <p class="font-body text-base text-dark/60 font-light">Soluções inteligentes para cada ambiente</p>
+                </div>
+                
+                <div class="hidden md:flex gap-4 mt-6 md:mt-0">
+                    <button id="kitsPrev" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-white transition-colors">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="kitsNext" class="w-10 h-10 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark hover:text-white transition-colors">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Carousel -->
+            <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8" id="kitsCarouselContainer">
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Bandeja decorativa/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bandeja Decorativa MDF 30x20cm">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Bandeja decorativa/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/1.png'"><img src="img/produtos/Bandeja decorativa/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/2.png'"><img src="img/produtos/Bandeja decorativa/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/3.png'"><img src="img/produtos/Bandeja decorativa/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/4.png'"><img src="img/produtos/Bandeja decorativa/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/5.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Bandeja Decorativa MDF 30x20cm</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$49,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Bomba ar/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bomba de Ar Manual Portátil">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Bomba ar/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/1.png'"><img src="img/produtos/Bomba ar/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/2.png'"><img src="img/produtos/Bomba ar/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/3.png'"><img src="img/produtos/Bomba ar/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/4.png'"><img src="img/produtos/Bomba ar/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/5.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Bomba de Ar Manual Portátil</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$34,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Dispenser Alimentos e Sabão/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia 4 em 1">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Dispenser Alimentos e Sabão/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Dispenser Alimentos e Sabão/1.png'"><img src="img/produtos/Dispenser Alimentos e Sabão/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Dispenser Alimentos e Sabão/2.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Organizador de Pia 4 em 1</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$34,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Escorredor de Tampas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Suporte Organizador de Tampas">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Escorredor de Tampas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/1.png'"><img src="img/produtos/Escorredor de Tampas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/2.png'"><img src="img/produtos/Escorredor de Tampas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/3.png'"><img src="img/produtos/Escorredor de Tampas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/4.png'"><img src="img/produtos/Escorredor de Tampas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/5.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Suporte Organizador de Tampas</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$29,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Kit organizadores gaveta/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 7 Organizadores de Gaveta">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Kit organizadores gaveta/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/1.png'"><img src="img/produtos/Kit organizadores gaveta/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/2.png'"><img src="img/produtos/Kit organizadores gaveta/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/3.png'"><img src="img/produtos/Kit organizadores gaveta/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/4.png'"><img src="img/produtos/Kit organizadores gaveta/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/5.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Kit 7 Organizadores de Gaveta</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$39,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden" 
+                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Suporte Toalhas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Toalheiro Duplo Parede 46cm">
+                        
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
+             <img src="img/produtos/Suporte Toalhas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/1.png'"><img src="img/produtos/Suporte Toalhas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/2.png'"><img src="img/produtos/Suporte Toalhas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/3.png'"><img src="img/produtos/Suporte Toalhas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/4.png'"><img src="img/produtos/Suporte Toalhas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/5.png'">
+        </div>
+        
+                    </div>
+                    <div class="px-6 py-6 bg-white">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Toalheiro Duplo Parede 46cm</h3>
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+                        <div class="flex justify-between items-end mt-4">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$67,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: NEWSLETTER & AVALIAÇÕES -->
+    <section class="w-full flex flex-col items-center">
+        
+        <!-- Newsletter Top Half -->
+        <div class="w-full bg-[#F9F9F9] py-16 px-6 md:px-12 lg:px-20 border-t border-dark/5 relative overflow-hidden">
+            <!-- Subtle Background Gradients -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/5 to-transparent pointer-events-none opacity-50"></div>
+            
+            <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-10 md:gap-16 items-center justify-between relative z-10 reveal-up">
+                
+                <!-- Text -->
+                <div class="w-full lg:w-5/12 text-center lg:text-left">
+                    <h2 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark mb-4 leading-tight">Receba novidades e ofertas exclusivas!</h2>
+                    <p class="font-body text-xs md:text-sm text-dark/60 font-light max-w-md mx-auto lg:mx-0 leading-relaxed">
+                        Inscreva-se e seja o primeiro a conhecer nossos lançamentos imperdíveis e aproveitar promoções especiais feitas para você.
+                    </p>
+                </div>
+
+                <!-- Form -->
+                <div class="w-full lg:w-7/12">
+                    <form class="flex flex-col gap-4 w-full" onsubmit="event.preventDefault();">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                            <!-- Input Name -->
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-dark/30 group-focus-within:text-dark transition-colors">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                                <input type="text" placeholder="Escreva seu nome" class="w-full bg-white border border-dark/10 rounded-sm text-xs font-body text-dark py-3.5 pl-10 pr-4 focus:outline-none focus:border-dark focus:ring-0 transition-all placeholder:text-dark/30">
+                            </div>
+                            <!-- Input Phone -->
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-dark/30 group-focus-within:text-dark transition-colors">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </div>
+                                <input type="tel" placeholder="Escreva seu telefone" class="w-full bg-white border border-dark/10 rounded-sm text-xs font-body text-dark py-3.5 pl-10 pr-4 focus:outline-none focus:border-dark focus:ring-0 transition-all placeholder:text-dark/30">
+                            </div>
+                            <!-- Input Email -->
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-dark/30 group-focus-within:text-dark transition-colors">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </div>
+                                <input type="email" placeholder="Escreva seu e-mail" class="w-full bg-white border border-dark/10 rounded-sm text-xs font-body text-dark py-3.5 pl-10 pr-4 focus:outline-none focus:border-dark focus:ring-0 transition-all placeholder:text-dark/30">
+                            </div>
+                        </div>
+                        <div class="flex justify-center md:justify-start mt-2">
+                            <button type="submit" class="w-full md:w-auto px-12 py-3.5 bg-[#333333] text-white rounded-sm font-body font-medium text-xs tracking-wider hover:bg-black transition-colors relative overflow-hidden btn-shimmer group cursor-hover">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    Quero receber
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avaliações Bottom Half -->
+        <div class="w-full bg-white py-24 border-t border-dark/5 relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 reveal-up">
+                <h3 class="text-center font-display text-2xl md:text-3xl font-medium tracking-tight text-dark mb-16">Avaliações da loja</h3>
+            </div>
+            
+            <!-- Infinite Marquee Track -->
+            <div class="relative w-full flex overflow-hidden group-marquee">
+                <!-- Gradients for smooth fade at edges -->
+                <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                
+                <!-- Track 1 -->
+                <div class="flex animate-marquee gap-6 md:gap-8 pr-6 md:pr-8 items-stretch">
+                    
+                    <!-- Review 1 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Perfeito. Atendeu perfeitamente as minhas expectativas, qualidade impecável e acabamento maravilhoso. Recomendo muito!"</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Teresa C.</span>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Excelente produto além de muito prático. Transformou a organização da minha cozinha. Entrega super rápida."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Anônimo</span>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Muito bom. Design minimalista e elegante, exatamente o que eu procurava para a minha casa."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Simone C.</span>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Impressionante a qualidade do material. Comprei o kit de potes herméticos e já vou pedir mais para minha mãe."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Roberto S.</span>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Estava procurando itens clean para a cozinha nova e a Velka salvou! Tudo impecável."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Mariana O.</span>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#E5E5E5] text-[#E5E5E5]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Chegou antes do prazo! Muito cuidado com a embalagem. Um item veio com um risquinho mas nada que me impeça de usar."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Lucas F.</span>
+                    </div>
+                </div>
+
+                <!-- Track 2 (DUPLICATE FOR INFINITE LOOP) -->
+                <div class="flex animate-marquee gap-6 md:gap-8 pr-6 md:pr-8 items-stretch" aria-hidden="true">
+                    
+                    <!-- Duplicate 1 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Perfeito. Atendeu perfeitamente as minhas expectativas, qualidade impecável e acabamento maravilhoso. Recomendo muito!"</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Teresa C.</span>
+                    </div>
+
+                    <!-- Duplicate 2 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Excelente produto além de muito prático. Transformou a organização da minha cozinha. Entrega super rápida."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Anônimo</span>
+                    </div>
+
+                    <!-- Duplicate 3 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Muito bom. Design minimalista e elegante, exatamente o que eu procurava para a minha casa."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Simone C.</span>
+                    </div>
+
+                    <!-- Duplicate 4 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Impressionante a qualidade do material. Comprei o kit de potes herméticos e já vou pedir mais para minha mãe."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Roberto S.</span>
+                    </div>
+
+                    <!-- Duplicate 5 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Estava procurando itens clean para a cozinha nova e a Velka salvou! Tudo impecável."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Mariana O.</span>
+                    </div>
+
+                    <!-- Duplicate 6 -->
+                    <div class="w-[300px] md:w-[380px] whitespace-normal flex flex-col items-center text-center p-8 bg-white border border-transparent hover:border-dark/10 transition-colors duration-500 rounded-sm flashlight-card-light relative group flex-shrink-0"
+                         onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                        <div class="flex gap-1 mb-6 transform group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#F5A623] text-[#F5A623]"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-[#E5E5E5] text-[#E5E5E5]"></i>
+                        </div>
+                        <p class="font-body text-dark/80 text-[15px] font-light leading-relaxed mb-8 flex-grow">"Chegou antes do prazo! Muito cuidado com a embalagem. Um item veio com um risquinho mas nada que me impeça de usar."</p>
+                        <span class="text-[10px] font-mono tracking-widest text-dark/30 uppercase group-hover:text-dark/60 transition-colors">Lucas F.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5.5: LANÇAMENTOS -->
+    <section class="py-32 px-6 md:px-12 lg:px-20 bg-white w-full border-t border-dark/5 relative overflow-hidden">
+        <!-- Abstract Background Accent -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-stone/50 to-transparent opacity-50 blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-[1600px] mx-auto relative z-10">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-up">
+                <div class="max-w-3xl">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-2 tracking-tight">Viagem & Lazer</h2>
+                    <p class="font-body text-dark/60">Praticidade e conforto em qualquer lugar</p>
+                </div>
+                <div class="hidden md:flex gap-4 mt-8 md:mt-0">
+                    <!-- Advanced Next/Prev Buttons with Border Beam -->
+                    <button id="lancamentosPrev" class="group relative flex items-center justify-center w-12 h-12 rounded-full p-[1px] leading-none overflow-hidden hover:shadow-lg transition-shadow">
+                        <span class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_340deg,black_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <span class="relative flex h-full w-full items-center justify-center rounded-full bg-white ring-1 ring-dark/10 group-hover:ring-transparent transition-colors">
+                            <i data-lucide="arrow-left" class="w-5 h-5 text-dark group-hover:-translate-x-0.5 transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                    <button id="lancamentosNext" class="group relative flex items-center justify-center w-12 h-12 rounded-full p-[1px] leading-none overflow-hidden hover:shadow-lg transition-shadow">
+                        <span class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0_340deg,black_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <span class="relative flex h-full w-full items-center justify-center rounded-full bg-white ring-1 ring-dark/10 group-hover:ring-transparent transition-colors">
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-dark group-hover:translate-x-0.5 transition-transform duration-300"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Carousel -->
+            <div class="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-16 pt-4" id="lancamentosCarouselContainer" style="scrollbar-width: none;">
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Bolsa Viagem/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Mochila de Viagem 30-40L" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                    </div>
+                    <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Mochila de Viagem 30-40L</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-auto">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$ 189,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Travesseiro Pescoço/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Travesseiro de Pescoço para Viagem" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                    </div>
+                    <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Travesseiro de Pescoço para Viagem</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-auto">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$ 49,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Cadeira Camping/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Cadeira Camping Dobrável" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                    </div>
+                    <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Cadeira Camping Dobrável</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-auto">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$ 94,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[280px] md:min-w-[320px] w-[280px] md:w-[320px] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+                    <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
+                        <img src="img/produtos/Banquinho Dobrável/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Banquinho Dobrável Portátil" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                    </div>
+                    <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
+                        <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 group-hover:text-accent transition-colors line-clamp-2">Banquinho Dobrável Portátil</h3>
+                        
+                        <div class="flex items-center gap-1 text-dark/40 mb-3">
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-current text-dark/80"></i>
+                        </div>
+
+                        <div class="flex justify-between items-end mt-auto">
+                            <div class="flex flex-col">
+                                <span class="font-display font-bold text-lg text-dark">R$ 39,90</span>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-dark text-white flex items-center justify-center hover:bg-accent transition-colors group-hover:scale-110">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: MOTHERS DAY BANNER -->
+    <section class="w-full bg-white pb-24 md:pb-32 px-4 md:px-12 lg:px-20">
+        <div class="max-w-[1600px] mx-auto h-[400px] md:h-[450px] relative rounded-md overflow-hidden flex reveal-up group">
+            
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-dark/10 z-0 pointer-events-none"></div>
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-[10s] ease-out z-[-1]" alt="Mãe e filha na cozinha">
+            
+            <!-- Content Overlay (Left Panel) -->
+            <div class="absolute top-0 left-0 bottom-0 w-[85%] md:w-[55%] lg:w-[45%] bg-[#F3EFE9] md:rounded-r-[60px] flex flex-col justify-between p-8 md:p-14 lg:p-16 z-10 shadow-2xl md:shadow-[20px_0_40px_-15px_rgba(0,0,0,0.1)]">
+                
+                <div class="flex flex-col relative z-20">
+                    <span class="font-display text-sm md:text-[15px] tracking-[0.4em] uppercase text-dark mb-3 font-light">Dia das</span>
+                    <h2 class="font-display text-5xl md:text-6xl lg:text-7xl tracking-[0.25em] uppercase text-dark font-light leading-none">Mães</h2>
+                </div>
+
+                <div class="mt-auto flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-20">
+                    <a href="#" class="inline-flex items-center justify-center bg-white text-dark font-display text-[10px] md:text-xs tracking-widest uppercase px-6 py-3.5 md:py-4 rounded-full hover:bg-dark hover:text-white transition-all w-max btn-shimmer relative overflow-hidden ring-1 ring-black/5 shadow-sm group/btn order-2 md:order-1">
+                        <span class="relative z-10 flex items-center gap-2">Ver Opções</span>
+                    </a>
+                    <p class="font-display text-xl md:text-2xl text-dark leading-snug max-w-[280px] font-light order-1 md:order-2">
+                        Escolhas para presentear quem traz <span class="font-medium italic">sentido</span> ao lar
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 8: CONHEÇA A VELKA -->
+    <section class="py-24 px-6 md:px-12 lg:px-20 bg-[#F9F9F9] w-full border-t border-dark/5">
+        <div class="max-w-[1600px] mx-auto relative">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-up">
+                <div class="max-w-3xl">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-2 tracking-tight">Por que escolher a Velka</h2>
+                    <p class="font-body text-dark/60">Design inteligente e segurança em cada etapa.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal-up">
+                
+                <!-- Card 1 -->
+                <div class="flex flex-col sm:flex-row bg-white rounded-md overflow-hidden group hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-black/5">
+                    <div class="w-full sm:w-1/2 relative overflow-hidden aspect-[4/3] sm:aspect-auto">
+                        <div class="absolute inset-0 bg-dark/30 group-hover:bg-dark/10 transition-colors duration-700 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Nossa Curadoria">
+                        <div class="absolute inset-0 flex items-center justify-center z-20">
+                            <h3 class="font-display text-3xl text-white font-bold tracking-tight drop-shadow-md">NOSSA <span class="font-light">CURADORIA</span></h3>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white relative">
+                        <div class="absolute top-0 left-0 w-1 h-0 bg-dark group-hover:h-full transition-all duration-700 ease-in-out"></div>
+                        <h4 class="font-display text-xl text-dark font-bold mb-4 tracking-tight">NOSSA CURADORIA</h4>
+                        <p class="font-body text-sm text-dark/70 leading-relaxed">
+                            Acreditamos que a beleza mora na utilidade. Selecionamos rigorosamente itens para o seu lar que unem estética minimalista, durabilidade e alta funcionalidade para simplificar a sua rotina.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex flex-col sm:flex-row bg-white rounded-md overflow-hidden group hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-black/5" style="animation-delay: 200ms;">
+                    <div class="w-full sm:w-1/2 relative overflow-hidden aspect-[4/3] sm:aspect-auto">
+                        <div class="absolute inset-0 bg-dark/30 group-hover:bg-dark/10 transition-colors duration-700 z-10"></div>
+                        <img src="img/experiencia_amazon.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Experiência Amazon">
+                        <div class="absolute inset-0 flex items-center justify-center z-20">
+                            <h3 class="font-display text-3xl text-white font-bold tracking-tight drop-shadow-md">EXPERIÊNCIA <span class="font-light">AMAZON</span></h3>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white relative">
+                        <div class="absolute top-0 left-0 w-1 h-0 bg-dark group-hover:h-full transition-all duration-700 ease-in-out"></div>
+                        <h4 class="font-display text-xl text-dark font-bold mb-4 tracking-tight">EXPERIÊNCIA AMAZON</h4>
+                        <p class="font-body text-sm text-dark/70 leading-relaxed">
+                            Sua tranquilidade é nossa prioridade. Toda a nossa operação de pagamentos, logística de entrega rápida (Prime) e devoluções é processada e garantida pela Amazon Brasil.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#0A0A0A] text-white pt-20 pb-8 px-6 md:px-12 lg:px-20 border-t border-white/10 relative z-10">
+        <div class="max-w-[1600px] mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20 reveal-up">
+
+                <!-- Col 2: Sobre nós -->
+                <div>
+                    <h5 class="font-display text-[13px] font-bold tracking-wide mb-6 uppercase text-white/90">Sobre nós</h5>
+                    <ul class="space-y-4 font-body text-[13px] text-white/50">
+                        <li><span class="inline-block">Quem somos</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Dúvidas -->
+                <div>
+                    <h5 class="font-display text-[13px] font-bold tracking-wide mb-6 uppercase text-white/90">Dúvidas</h5>
+                    <ul class="space-y-4 font-body text-[13px] text-white/50">
+                        <li><a href="mailto:voravarejo@gmail.com" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Fale conosco</a></li>
+                        <li><a href="#" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Formas de pagamento -->
+                <div>
+                    <h5 class="font-display text-[13px] font-bold tracking-wide mb-6 uppercase text-white/90">Formas de pagamento</h5>
+                    <div class="grid grid-cols-4 gap-2 opacity-50">
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">VISA</div>
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">MASTER</div>
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">AMEX</div>
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">PIX</div>
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">ELO</div>
+                        <div class="h-8 border border-white/20 rounded flex items-center justify-center text-[9px] font-bold tracking-wider hover:bg-white hover:text-black transition-colors cursor-default">BOLETO</div>
+                    </div>
+                </div>
+
+                <!-- Col 5: Certificados e Selos -->
+                <div>
+                    <h5 class="font-display text-[13px] font-bold tracking-wide mb-6 uppercase text-white/90">Certificados & Selos</h5>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                            <div class="text-[11px] font-bold leading-tight">SITE SEGURO<br><span class="font-light text-[9px] text-white/70">SSL Criptografado</span></div>
+                        </div>
+                        <div class="flex gap-2 items-center mt-2">
+                             <div class="bg-white text-dark text-[9px] px-2.5 py-1.5 font-bold rounded-sm flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity cursor-pointer"><i data-lucide="lock" class="w-3 h-3 text-dark"></i> Loja Verificada</div>
+                             <div class="bg-[#52B434] text-white text-[9px] px-2.5 py-1.5 font-bold rounded-sm flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity cursor-pointer"><i data-lucide="smile" class="w-3 h-3"></i> RA 1000</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-body text-white/30">
+                <div class="flex items-center gap-3">
+                    <span class="font-display tracking-[0.2em] text-white/60 font-bold text-sm">VELKA</span>
+                    <span class="hidden md:inline-block w-1 h-1 rounded-full bg-white/20"></span>
+                    <span>© 2026 Velka Home. Todos os direitos reservados.</span>
+                </div>
+                <div class="font-mono tracking-widest">
+                    CNPJ: 00.000.000/0001-00
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
