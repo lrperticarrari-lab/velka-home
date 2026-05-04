@@ -62,36 +62,61 @@
                 ease: "power3.out"
             }, "-=0.8");
 
-            // Hero image subtle zoom out (Parallax setup)
-            gsap.to('.hero-img', {
-                yPercent: 15,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".hero-img",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+            // GSAP MatchMedia for Performance Optimization
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 768px)", () => {
+                // Desktop: Full parallax and blur reveals
+                gsap.to('.hero-img', {
+                    yPercent: 15,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hero-img",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+                const revealElements = document.querySelectorAll('.reveal-up');
+                revealElements.forEach(el => {
+                    gsap.fromTo(el, 
+                        { opacity: 0, y: 30, filter: "blur(10px)" },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            filter: "blur(0px)",
+                            duration: 1.2,
+                            ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: el,
+                                start: "top 85%",
+                                toggleActions: "play none none reverse"
+                            }
+                        }
+                    );
+                });
             });
 
-            // General Reveal Up Elements for scroll
-            const revealElements = document.querySelectorAll('.reveal-up');
-            revealElements.forEach(el => {
-                gsap.fromTo(el, 
-                    { opacity: 0, y: 30, filter: "blur(10px)" },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        filter: "blur(0px)",
-                        duration: 1.2,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 85%",
-                            toggleActions: "play none none reverse"
+            mm.add("(max-width: 767px)", () => {
+                // Mobile: Simplified animations (no parallax, no blur, faster)
+                const revealElements = document.querySelectorAll('.reveal-up');
+                revealElements.forEach(el => {
+                    gsap.fromTo(el, 
+                        { opacity: 0, y: 15 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.6,
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: el,
+                                start: "top 92%",
+                                toggleActions: "play none none none"
+                            }
                         }
-                    }
-                );
+                    );
+                });
             });
 
             // Mothers Day Carousel Logic
@@ -182,6 +207,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 categoriasPrev.addEventListener('click', () => {
                     categoriasCarousel.scrollBy({ left: -320, behavior: 'smooth' });
+                });
+            }
+
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+                let isMenuOpen = false;
+
+                mobileMenuBtn.addEventListener('click', () => {
+                    isMenuOpen = !isMenuOpen;
+                    if (isMenuOpen) {
+                        mobileMenu.classList.remove('translate-x-full');
+                        mobileMenu.classList.add('translate-x-0');
+                        if (mobileMenuIcon) mobileMenuIcon.setAttribute('data-lucide', 'x');
+                        lucide.createIcons();
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileMenu.classList.remove('translate-x-0');
+                        mobileMenu.classList.add('translate-x-full');
+                        if (mobileMenuIcon) mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                        document.body.style.overflow = '';
+                    }
+                });
+                
+                // Close menu when clicking a link
+                const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        isMenuOpen = false;
+                        mobileMenu.classList.remove('translate-x-0');
+                        mobileMenu.classList.add('translate-x-full');
+                        if (mobileMenuIcon) mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                        document.body.style.overflow = '';
+                    });
                 });
             }
         });

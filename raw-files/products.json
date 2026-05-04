@@ -1,0 +1,283 @@
+[
+  {
+    "nome": "Bandeja Decorativa MDF 30x20cm",
+    "preco": "R$49,90",
+    "categoria": "Casa",
+    "pasta": "Bandeja decorativa",
+    "imagens": [
+      "Banco de Imagens/Bandeja decorativa/1.png",
+      "Banco de Imagens/Bandeja decorativa/2.png",
+      "Banco de Imagens/Bandeja decorativa/3.png",
+      "Banco de Imagens/Bandeja decorativa/4.png",
+      "Banco de Imagens/Bandeja decorativa/5.png",
+      "Banco de Imagens/Bandeja decorativa/6.png",
+      "Banco de Imagens/Bandeja decorativa/7.png"
+    ]
+  },
+  {
+    "nome": "Banquinho Dobrável Portátil",
+    "preco": "R$39,90",
+    "categoria": "Camping & Lazer",
+    "pasta": "Banquinho Dobrável",
+    "imagens": [
+      "Banco de Imagens/Banquinho Dobrável/1.png",
+      "Banco de Imagens/Banquinho Dobrável/2.png",
+      "Banco de Imagens/Banquinho Dobrável/3.png",
+      "Banco de Imagens/Banquinho Dobrável/4.png",
+      "Banco de Imagens/Banquinho Dobrável/5.png",
+      "Banco de Imagens/Banquinho Dobrável/6.png",
+      "Banco de Imagens/Banquinho Dobrável/7.png",
+      "Banco de Imagens/Banquinho Dobrável/Banquinho Dobrável.png"
+    ]
+  },
+  {
+    "nome": "Bomba de Ar Manual Portátil",
+    "preco": "R$34,90",
+    "categoria": "Casa",
+    "pasta": "Bomba ar",
+    "imagens": [
+      "Banco de Imagens/Bomba ar/1.png",
+      "Banco de Imagens/Bomba ar/2.png",
+      "Banco de Imagens/Bomba ar/3.png",
+      "Banco de Imagens/Bomba ar/4.png",
+      "Banco de Imagens/Bomba ar/5.png",
+      "Banco de Imagens/Bomba ar/6.png",
+      "Banco de Imagens/Bomba ar/7.png",
+      "Banco de Imagens/Bomba ar/8.png"
+    ]
+  },
+  {
+    "nome": "Cadeira Camping Dobrável",
+    "preco": "R$94,90",
+    "categoria": "Camping & Lazer",
+    "pasta": "Cadeira Camping",
+    "imagens": [
+      "Banco de Imagens/Cadeira Camping/1.png",
+      "Banco de Imagens/Cadeira Camping/2.png",
+      "Banco de Imagens/Cadeira Camping/3.png",
+      "Banco de Imagens/Cadeira Camping/4.png",
+      "Banco de Imagens/Cadeira Camping/5.png",
+      "Banco de Imagens/Cadeira Camping/6.png",
+      "Banco de Imagens/Cadeira Camping/7.png",
+      "Banco de Imagens/Cadeira Camping/8.png"
+    ]
+  },
+  {
+    "nome": "Organizador de Pia 4 em 1",
+    "preco": "R$34,90",
+    "categoria": "Organização",
+    "pasta": "Dispenser Alimentos e Sabão",
+    "imagens": [
+      "Banco de Imagens/Dispenser Alimentos e Sabão/1.png",
+      "Banco de Imagens/Dispenser Alimentos e Sabão/2.png"
+    ]
+  },
+  {
+    "nome": "Suporte Organizador de Tampas",
+    "preco": "R$29,90",
+    "categoria": "Organização",
+    "pasta": "Escorredor de Tampas",
+    "imagens": [
+      "Banco de Imagens/Escorredor de Tampas/1.png",
+      "Banco de Imagens/Escorredor de Tampas/2.png",
+      "Banco de Imagens/Escorredor de Tampas/3.png",
+      "Banco de Imagens/Escorredor de Tampas/4.png",
+      "Banco de Imagens/Escorredor de Tampas/5.png",
+      "Banco de Imagens/Escorredor de Tampas/6.png",
+      "Banco de Imagens/Escorredor de Tampas/7.png"
+    ]
+  },
+  {
+    "nome": "Escorredor Porta Talheres Inox",
+    "preco": "R$34,90",
+    "categoria": "Cozinha",
+    "pasta": "Escorredor Talheres",
+    "imagens": [
+      "Banco de Imagens/Escorredor Talheres/1.png",
+      "Banco de Imagens/Escorredor Talheres/2(1).png",
+      "Banco de Imagens/Escorredor Talheres/2.png",
+      "Banco de Imagens/Escorredor Talheres/3.png",
+      "Banco de Imagens/Escorredor Talheres/4.png",
+      "Banco de Imagens/Escorredor Talheres/5.png",
+      "Banco de Imagens/Escorredor Talheres/6.png"
+    ]
+  },
+  {
+    "nome": "Kit 2 Moedores Elétricos Inox",
+    "preco": "R$134,90",
+    "categoria": "Cozinha",
+    "pasta": "Kit 2 moedores elétrico",
+    "imagens": [
+      "Banco de Imagens/Kit 2 moedores elétrico/1.png",
+      "Banco de Imagens/Kit 2 moedores elétrico/2.png",
+      "Banco de Imagens/Kit 2 moedores elétrico/3.png",
+      "Banco de Imagens/Kit 2 moedores elétrico/4.png",
+      "Banco de Imagens/Kit 2 moedores elétrico/5.png",
+      "Banco de Imagens/Kit 2 moedores elétrico/6.png"
+    ]
+  },
+  {
+    "nome": "Kit Cadeira + Banquinho Camping",
+    "preco": "R$154,90",
+    "categoria": "Camping & Lazer",
+    "pasta": "Kit Cadeira + Banquinho",
+    "imagens": [
+      "Banco de Imagens/Kit Cadeira + Banquinho/1.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/2.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/3.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/4.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/5.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/6.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/7.png",
+      "Banco de Imagens/Kit Cadeira + Banquinho/8.png"
+    ]
+  },
+  {
+    "nome": "Kit 7 Organizadores de Gaveta",
+    "preco": "R$39,90",
+    "categoria": "Organização",
+    "pasta": "Kit organizadores gaveta",
+    "imagens": [
+      "Banco de Imagens/Kit organizadores gaveta/1.png",
+      "Banco de Imagens/Kit organizadores gaveta/2.png",
+      "Banco de Imagens/Kit organizadores gaveta/3.png",
+      "Banco de Imagens/Kit organizadores gaveta/4.png",
+      "Banco de Imagens/Kit organizadores gaveta/5.png",
+      "Banco de Imagens/Kit organizadores gaveta/6.png",
+      "Banco de Imagens/Kit organizadores gaveta/7.png"
+    ]
+  },
+  {
+    "nome": "Mesa Dobrável Portátil 50x50cm",
+    "preco": "R$119,90",
+    "categoria": "Camping & Lazer",
+    "pasta": "Mesa Camping",
+    "imagens": [
+      "Banco de Imagens/Mesa Camping/1.png",
+      "Banco de Imagens/Mesa Camping/2.png",
+      "Banco de Imagens/Mesa Camping/3.png",
+      "Banco de Imagens/Mesa Camping/4.png",
+      "Banco de Imagens/Mesa Camping/5.png",
+      "Banco de Imagens/Mesa Camping/6.png",
+      "Banco de Imagens/Mesa Camping/7.png",
+      "Banco de Imagens/Mesa Camping/8.png"
+    ]
+  },
+  {
+    "nome": "Porta Ovos 32un Gavetas Deslizantes",
+    "preco": "R$49,90",
+    "categoria": "Cozinha",
+    "pasta": "Organizador de ovos",
+    "imagens": [
+      "Banco de Imagens/Organizador de ovos/1.png",
+      "Banco de Imagens/Organizador de ovos/2.png",
+      "Banco de Imagens/Organizador de ovos/3.png",
+      "Banco de Imagens/Organizador de ovos/4.png",
+      "Banco de Imagens/Organizador de ovos/5.png",
+      "Banco de Imagens/Organizador de ovos/6.png",
+      "Banco de Imagens/Organizador de ovos/7.png"
+    ]
+  },
+  {
+    "nome": "Petisqueira Bambu 25cm 5 Div.",
+    "preco": "R$64,90",
+    "categoria": "Cozinha",
+    "pasta": "Petisqueira",
+    "imagens": [
+      "Banco de Imagens/Petisqueira/1.png",
+      "Banco de Imagens/Petisqueira/2.png",
+      "Banco de Imagens/Petisqueira/3.png",
+      "Banco de Imagens/Petisqueira/4.png",
+      "Banco de Imagens/Petisqueira/5.png",
+      "Banco de Imagens/Petisqueira/6.png",
+      "Banco de Imagens/Petisqueira/7.png"
+    ]
+  },
+  {
+    "nome": "Porta Bolo Bambu Tampa Acrílica 28cm",
+    "preco": "R$64,90",
+    "categoria": "Cozinha",
+    "pasta": "Porta Bolos",
+    "imagens": [
+      "Banco de Imagens/Porta Bolos/1.png",
+      "Banco de Imagens/Porta Bolos/2.png",
+      "Banco de Imagens/Porta Bolos/3.png",
+      "Banco de Imagens/Porta Bolos/4.png",
+      "Banco de Imagens/Porta Bolos/5.png",
+      "Banco de Imagens/Porta Bolos/6.png",
+      "Banco de Imagens/Porta Bolos/7.png",
+      "Banco de Imagens/Porta Bolos/8.png"
+    ]
+  },
+  {
+    "nome": "Porta Queijo Bambu 19cm",
+    "preco": "R$39,90",
+    "categoria": "Cozinha",
+    "pasta": "Porta Queijo",
+    "imagens": [
+      "Banco de Imagens/Porta Queijo/1.png",
+      "Banco de Imagens/Porta Queijo/2.png",
+      "Banco de Imagens/Porta Queijo/3.png",
+      "Banco de Imagens/Porta Queijo/4.png",
+      "Banco de Imagens/Porta Queijo/5.png",
+      "Banco de Imagens/Porta Queijo/6.png",
+      "Banco de Imagens/Porta Queijo/7.png",
+      "Banco de Imagens/Porta Queijo/8.png"
+    ]
+  },
+  {
+    "nome": "Potes Herméticos Vidro + Bambu",
+    "preco": "R$27,90 – R$99,90",
+    "categoria": "Cozinha",
+    "pasta": "Potes Herméticos Tampa Bambu",
+    "imagens": [
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/1.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/10.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/11.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/12.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/13.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/14.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/2.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/3.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/4.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/5.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/6.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/7.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/8.png",
+      "Banco de Imagens/Potes Herméticos Tampa Bambu/9.png"
+    ]
+  },
+  {
+    "nome": "Kit Potes 1,5L com Dispenser",
+    "preco": "R$39,90 – R$99,90",
+    "categoria": "Cozinha",
+    "pasta": "Suporte Pia",
+    "imagens": [
+      "Banco de Imagens/Suporte Pia/1.png",
+      "Banco de Imagens/Suporte Pia/2.png",
+      "Banco de Imagens/Suporte Pia/3.png",
+      "Banco de Imagens/Suporte Pia/4.png",
+      "Banco de Imagens/Suporte Pia/5.png",
+      "Banco de Imagens/Suporte Pia/6.png",
+      "Banco de Imagens/Suporte Pia/CAPA.png",
+      "Banco de Imagens/Suporte Pia/Nova Capa.png"
+    ]
+  },
+  {
+    "nome": "Toalheiro Duplo Parede 46cm",
+    "preco": "R$67,90",
+    "categoria": "Casa",
+    "pasta": "Suporte Toalhas",
+    "imagens": [
+      "Banco de Imagens/Suporte Toalhas/1.png",
+      "Banco de Imagens/Suporte Toalhas/2.png",
+      "Banco de Imagens/Suporte Toalhas/3.png",
+      "Banco de Imagens/Suporte Toalhas/4.png",
+      "Banco de Imagens/Suporte Toalhas/5.png",
+      "Banco de Imagens/Suporte Toalhas/6.png",
+      "Banco de Imagens/Suporte Toalhas/7.png",
+      "Banco de Imagens/Suporte Toalhas/8.png",
+      "Banco de Imagens/Suporte Toalhas/9.png"
+    ]
+  }
+]
