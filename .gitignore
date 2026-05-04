@@ -1,1 +1,17 @@
-.venv/
+# Production Build Ignore List
+_development_only/
+.DS_Store
+*.zip
+*.xlsx
+*.txt
+*.sh
+*.py
+node_modules/
+.gemini/
+.dev_assets/
+used_assets_clean.txt
+all_img_files.txt
+unused_img_files.txt
+used_images.txt
+all_images.txt
+unused_images.txt

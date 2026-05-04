@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@200;300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop">
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -108,7 +109,7 @@
 
         <!-- Image Background with Parallax + Masked Fade -->
         <div class="absolute inset-0 z-0 w-full h-full overflow-hidden" style="mask-image: linear-gradient(180deg, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(180deg, black 50%, transparent 100%);">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
+            <img decoding="async" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
                  alt="Velka Home - Premium Minimalist Interior" 
                  class="w-full h-[120%] object-cover object-[center_30%] hero-img opacity-40 origin-center scale-[1.02]">
         </div>
@@ -246,7 +247,7 @@
                         <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
                             
                             <!-- Premium Image Animation: zoom on hover, subtle floating -->
-                            <img src="img/categorias/potes-hermeticos.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Cozinha e Servir">
+                            <img decoding="async" src="img/categorias/potes-hermeticos.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Cozinha e Servir">
                             
                             <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
@@ -271,7 +272,7 @@
                         <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
                             
                             <!-- Premium Image Animation: zoom on hover, subtle floating -->
-                            <img src="img/categorias/gaveta-quarto.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Organização Inteligente">
+                            <img decoding="async" src="img/categorias/gaveta-quarto.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Organização Inteligente">
                             
                             <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
@@ -296,7 +297,7 @@
                         <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
                             
                             <!-- Premium Image Animation: zoom on hover, subtle floating -->
-                            <img src="img/categorias/Cesto-roupa.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Essenciais de Casa">
+                            <img decoding="async" src="img/categorias/Cesto-roupa.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Essenciais de Casa">
                             
                             <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
@@ -321,7 +322,7 @@
                         <div class="w-full aspect-[4/5] overflow-hidden relative flex items-center justify-center">
                             
                             <!-- Premium Image Animation: zoom on hover, subtle floating -->
-                            <img src="img/categorias/camping-lazer.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Viagem e Lazer">
+                            <img decoding="async" src="img/categorias/camping-lazer.png" class="w-full h-full object-cover group-hover:scale-105 group-hover:-translate-y-2 transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative z-10" alt="Viagem e Lazer">
                             
                             <!-- Glass Panel Label (Premium UI - Centered Bottom) -->
                             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white/80 backdrop-blur-xl border border-white/60 py-4 px-4 text-center transform translate-y-4 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-xl z-20 flex flex-col items-center justify-center">
@@ -367,13 +368,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Suporte Pia/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia em Aço Carbono Preto">
+                                <img loading="lazy" decoding="async" src="img/produtos/Suporte Pia/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia em Aço Carbono Preto">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Suporte Pia/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 1" onerror="this.src='img/produtos/Suporte Pia/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Suporte Pia/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 1" onerror="this.src='img/produtos/Suporte Pia/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Suporte Pia/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 2" onerror="this.src='img/produtos/Suporte Pia/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Suporte Pia/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Pia em Aço Carbono Preto Detalhe 2" onerror="this.src='img/produtos/Suporte Pia/1.png'">
                             </div>
                         </div>
                         
@@ -426,13 +427,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Chaleira Infusor/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Chaleira de Vidro Borossilicato 950ml com Infusor">
+                                <img loading="lazy" decoding="async" src="img/produtos/Chaleira Infusor/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Chaleira de Vidro Borossilicato 950ml com Infusor">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Chaleira Infusor/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 1" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Chaleira Infusor/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 1" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Chaleira Infusor/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 2" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Chaleira Infusor/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Chaleira de Vidro Borossilicato 950ml com Infusor Detalhe 2" onerror="this.src='img/produtos/Chaleira Infusor/1.png'">
                             </div>
                         </div>
                         
@@ -485,13 +486,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/potes-hermeticos-tampa-bambu/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Pote Hermético 1L de Vidro Borossilicato">
+                                <img loading="lazy" decoding="async" src="img/produtos/potes-hermeticos-tampa-bambu/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Pote Hermético 1L de Vidro Borossilicato">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/potes-hermeticos-tampa-bambu/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 1" onerror="this.src='img/produtos/potes-hermeticos-tampa-bambu/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/potes-hermeticos-tampa-bambu/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 1" onerror="this.src='img/produtos/potes-hermeticos-tampa-bambu/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/potes-hermeticos-tampa-bambu/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 2" onerror="this.src='img/produtos/potes-hermeticos-tampa-bambu/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/potes-hermeticos-tampa-bambu/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Pote Hermético 1L de Vidro Borossilicato Detalhe 2" onerror="this.src='img/produtos/potes-hermeticos-tampa-bambu/1.png'">
                             </div>
                         </div>
                         
@@ -544,13 +545,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 2 Potes Herméticos 1,5L com Medidor">
+                                <img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 2 Potes Herméticos 1,5L com Medidor">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/dispenser-alimentos-e-sabao/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 1" onerror="this.src='img/produtos/dispenser-alimentos-e-sabao/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 1" onerror="this.src='img/produtos/dispenser-alimentos-e-sabao/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 2" onerror="this.src='img/produtos/dispenser-alimentos-e-sabao/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-full h-full object-contain mix-blend-multiply" alt="Kit 2 Potes Herméticos 1,5L com Medidor Detalhe 2" onerror="this.src='img/produtos/dispenser-alimentos-e-sabao/1.png'">
                             </div>
                         </div>
                         
@@ -603,13 +604,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Petisqueira/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Petisqueira Bambu 25cm 5 Divisórias">
+                                <img loading="lazy" decoding="async" src="img/produtos/Petisqueira/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Petisqueira Bambu 25cm 5 Divisórias">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Petisqueira/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 1" onerror="this.src='img/produtos/Petisqueira/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Petisqueira/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 1" onerror="this.src='img/produtos/Petisqueira/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Petisqueira/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 2" onerror="this.src='img/produtos/Petisqueira/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Petisqueira/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Petisqueira Bambu 25cm 5 Divisórias Detalhe 2" onerror="this.src='img/produtos/Petisqueira/1.png'">
                             </div>
                         </div>
                         
@@ -662,13 +663,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Escorredor Talheres/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Escorredor Porta Talheres Inox">
+                                <img loading="lazy" decoding="async" src="img/produtos/Escorredor Talheres/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Escorredor Porta Talheres Inox">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Escorredor Talheres/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 1" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Escorredor Talheres/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 1" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Escorredor Talheres/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 2" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Escorredor Talheres/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Escorredor Porta Talheres Inox Detalhe 2" onerror="this.src='img/produtos/Escorredor Talheres/1.png'">
                             </div>
                         </div>
                         
@@ -721,13 +722,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Kit organizadores gaveta/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Gavetas Modular Transparente">
+                                <img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Gavetas Modular Transparente">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Kit organizadores gaveta/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 1" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 1" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Kit organizadores gaveta/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 2" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Organizador de Gavetas Modular Transparente Detalhe 2" onerror="this.src='img/produtos/Kit organizadores gaveta/1.png'">
                             </div>
                         </div>
                         
@@ -780,13 +781,13 @@
                             dots.forEach((d, i) => d.style.opacity = i === index ? '1' : '0.2');
                         ">
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Organizador de ovos/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Porta Ovos 32un Gavetas Deslizantes">
+                                <img loading="lazy" decoding="async" src="img/produtos/Organizador de ovos/1.png" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Porta Ovos 32un Gavetas Deslizantes">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Organizador de ovos/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 1" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Organizador de ovos/2.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 1" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
                             </div>
                             <div class="w-full h-full flex-shrink-0 snap-center p-6 flex items-center justify-center">
-                                <img src="img/produtos/Organizador de ovos/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 2" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
+                                <img loading="lazy" decoding="async" src="img/produtos/Organizador de ovos/3.png" class="w-full h-full object-contain mix-blend-multiply" alt="Porta Ovos 32un Gavetas Deslizantes Detalhe 2" onerror="this.src='img/produtos/Organizador de ovos/1.png'">
                             </div>
                         </div>
                         
@@ -836,7 +837,7 @@
             
             <!-- Slide 1 -->
             <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
-                <img src="https://images.unsplash.com/photo-1475609471617-0ef53b59cff5?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1475609471617-0ef53b59cff5?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-700"></div>
                 <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
                 
@@ -861,7 +862,7 @@
 
             <!-- Slide 2 -->
             <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
-                <img src="https://images.unsplash.com/photo-1494451930944-8998635c2123?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1494451930944-8998635c2123?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-700"></div>
                 <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
                 
@@ -886,7 +887,7 @@
 
             <!-- Slide 3 -->
             <div class="min-w-full w-full h-[50svh] md:h-[55svh] relative flex-shrink-0 snap-center group">
-                <img src="img/dia_das_maes_cozy.png" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
+                <img loading="lazy" decoding="async" src="img/dia_das_maes_cozy.png" class="absolute inset-0 w-full h-full object-cover object-center" alt="Dia das Mães">
                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-700"></div>
                 <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/60 md:bg-none"></div>
                 
@@ -952,10 +953,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Bandeja decorativa/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bandeja Decorativa MDF 30x20cm">
+                        <img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bandeja Decorativa MDF 30x20cm">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/Bandeja decorativa/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/1.png'"><img src="img/produtos/Bandeja decorativa/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/2.png'"><img src="img/produtos/Bandeja decorativa/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/3.png'"><img src="img/produtos/Bandeja decorativa/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/4.png'"><img src="img/produtos/Bandeja decorativa/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/5.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/1.png'"><img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/2.png'"><img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/3.png'"><img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/4.png'"><img loading="lazy" decoding="async" src="img/produtos/Bandeja decorativa/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bandeja decorativa/5.png'">
         </div>
         
                     </div>
@@ -982,10 +983,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Bomba ar/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bomba de Ar Manual Portátil">
+                        <img loading="lazy" decoding="async" src="img/produtos/Bomba ar/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Bomba de Ar Manual Portátil">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/Bomba ar/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/1.png'"><img src="img/produtos/Bomba ar/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/2.png'"><img src="img/produtos/Bomba ar/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/3.png'"><img src="img/produtos/Bomba ar/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/4.png'"><img src="img/produtos/Bomba ar/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/5.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/Bomba ar/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/1.png'"><img loading="lazy" decoding="async" src="img/produtos/Bomba ar/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/2.png'"><img loading="lazy" decoding="async" src="img/produtos/Bomba ar/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/3.png'"><img loading="lazy" decoding="async" src="img/produtos/Bomba ar/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/4.png'"><img loading="lazy" decoding="async" src="img/produtos/Bomba ar/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Bomba ar/5.png'">
         </div>
         
                     </div>
@@ -1012,10 +1013,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia 4 em 1">
+                        <img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Organizador de Pia 4 em 1">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/dispenser-alimentos-e-sabao/1.png'"><img src="img/produtos/dispenser-alimentos-e-sabao/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/dispenser-alimentos-e-sabao/2.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/dispenser-alimentos-e-sabao/1.png'"><img loading="lazy" decoding="async" src="img/produtos/dispenser-alimentos-e-sabao/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/dispenser-alimentos-e-sabao/2.png'">
         </div>
         
                     </div>
@@ -1042,10 +1043,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Escorredor de Tampas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Suporte Organizador de Tampas">
+                        <img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Suporte Organizador de Tampas">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/Escorredor de Tampas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/1.png'"><img src="img/produtos/Escorredor de Tampas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/2.png'"><img src="img/produtos/Escorredor de Tampas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/3.png'"><img src="img/produtos/Escorredor de Tampas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/4.png'"><img src="img/produtos/Escorredor de Tampas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/5.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/1.png'"><img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/2.png'"><img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/3.png'"><img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/4.png'"><img loading="lazy" decoding="async" src="img/produtos/Escorredor de Tampas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Escorredor de Tampas/5.png'">
         </div>
         
                     </div>
@@ -1072,10 +1073,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Kit organizadores gaveta/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 7 Organizadores de Gaveta">
+                        <img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Kit 7 Organizadores de Gaveta">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/Kit organizadores gaveta/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/1.png'"><img src="img/produtos/Kit organizadores gaveta/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/2.png'"><img src="img/produtos/Kit organizadores gaveta/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/3.png'"><img src="img/produtos/Kit organizadores gaveta/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/4.png'"><img src="img/produtos/Kit organizadores gaveta/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/5.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/1.png'"><img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/2.png'"><img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/3.png'"><img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/4.png'"><img loading="lazy" decoding="async" src="img/produtos/Kit organizadores gaveta/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Kit organizadores gaveta/5.png'">
         </div>
         
                     </div>
@@ -1102,10 +1103,10 @@
                 <div class="min-w-[75vw] w-[75vw] md:min-w-[calc(25%-24px)] md:w-[calc(25%-24px)] group cursor-hover snap-start flashlight-card-light relative border border-dark/5 bg-white transition-all duration-500 overflow-hidden flex flex-col rounded-[2rem] hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.12)]" 
                      onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-white relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Suporte Toalhas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Toalheiro Duplo Parede 46cm">
+                        <img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Toalheiro Duplo Parede 46cm">
                         
         <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md p-1.5 rounded-xl z-20 shadow-lg">
-             <img src="img/produtos/Suporte Toalhas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/1.png'"><img src="img/produtos/Suporte Toalhas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/2.png'"><img src="img/produtos/Suporte Toalhas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/3.png'"><img src="img/produtos/Suporte Toalhas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/4.png'"><img src="img/produtos/Suporte Toalhas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/5.png'">
+             <img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/1.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/1.png'"><img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/2.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/2.png'"><img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/3.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/3.png'"><img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/4.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/4.png'"><img loading="lazy" decoding="async" src="img/produtos/Suporte Toalhas/5.png" class="w-8 h-8 md:w-10 md:h-10 object-cover rounded cursor-pointer border border-transparent hover:border-accent transition-colors shadow-sm" onmouseover="this.parentElement.parentElement.querySelector('.main-img').src='img/produtos/Suporte Toalhas/5.png'">
         </div>
         
                     </div>
@@ -1415,7 +1416,7 @@
             <div class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory md:snap-none hide-scrollbar pb-16 pt-4" id="lancamentosCarouselContainer" style="scrollbar-width: none;">
                 <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[75vw] w-[75vw] md:min-w-0 md:w-full group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Bolsa Viagem/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Mochila de Viagem 30-40L" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                        <img loading="lazy" decoding="async" src="img/produtos/Bolsa Viagem/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Mochila de Viagem 30-40L" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
                     </div>
                     <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
                         <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 md:group-hover:text-accent transition-colors line-clamp-2">Mochila de Viagem 30-40L</h3>
@@ -1440,7 +1441,7 @@
                 </a>
                 <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[75vw] w-[75vw] md:min-w-0 md:w-full group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/travesseiro-pescoco/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Travesseiro de Pescoço para Viagem" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                        <img loading="lazy" decoding="async" src="img/produtos/travesseiro-pescoco/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Travesseiro de Pescoço para Viagem" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
                     </div>
                     <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
                         <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 md:group-hover:text-accent transition-colors line-clamp-2">Travesseiro de Pescoço para Viagem</h3>
@@ -1465,7 +1466,7 @@
                 </a>
                 <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[75vw] w-[75vw] md:min-w-0 md:w-full group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/Cadeira Camping/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Cadeira Camping Dobrável" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                        <img loading="lazy" decoding="async" src="img/produtos/Cadeira Camping/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="Cadeira Camping Dobrável" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
                     </div>
                     <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
                         <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 md:group-hover:text-accent transition-colors line-clamp-2">Cadeira Camping Dobrável</h3>
@@ -1490,7 +1491,7 @@
                 </a>
                 <a href="https://www.amazon.com.br/s?me=A2FL1W3S46MFWA&marketplaceID=A2Q3Y263D00KWC" target="_blank" rel="noopener noreferrer" class="min-w-[75vw] w-[75vw] md:min-w-0 md:w-full group cursor-hover snap-start flashlight-card-light relative border border-dark/5 hover:border-dark/10 bg-white transition-all duration-500 overflow-hidden block" onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="w-full aspect-[4/5] bg-[#F9F9F9] relative overflow-hidden flex items-center justify-center p-6 border-b border-dark/5">
-                        <img src="img/produtos/banquinho-dobravel/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="banquinho-dobravel Portátil" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
+                        <img loading="lazy" decoding="async" src="img/produtos/banquinho-dobravel/1.png" class="main-img w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" alt="banquinho-dobravel Portátil" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gray-100');">
                     </div>
                     <div class="px-6 py-6 bg-white flex flex-col h-[180px]">
                         <h3 class="font-body text-base text-dark font-medium leading-tight mb-2 md:group-hover:text-accent transition-colors line-clamp-2">banquinho-dobravel Portátil</h3>
@@ -1523,7 +1524,7 @@
             
             <!-- Background Image -->
             <div class="absolute inset-0 bg-dark/10 z-0 pointer-events-none"></div>
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-[10s] ease-out z-[-1]" alt="Mãe e filha na cozinha">
+            <img decoding="async" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-[10s] ease-out z-[-1]" alt="Mãe e filha na cozinha">
             
             <!-- Content Overlay (Left Panel) -->
             <div class="absolute top-0 left-0 bottom-0 w-[85%] md:w-[55%] lg:w-[45%] bg-[#F3EFE9] md:rounded-r-[60px] flex flex-col justify-between p-8 md:p-14 lg:p-16 z-10 shadow-2xl md:shadow-[20px_0_40px_-15px_rgba(0,0,0,0.1)]">
@@ -1562,7 +1563,7 @@
                 <div class="flex flex-col sm:flex-row bg-white rounded-md overflow-hidden group hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-black/5">
                     <div class="w-full sm:w-1/2 relative overflow-hidden aspect-[4/3] sm:aspect-auto">
                         <div class="absolute inset-0 bg-dark/30 group-hover:bg-dark/10 transition-colors duration-700 z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Nossa Curadoria">
+                        <img decoding="async" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Nossa Curadoria">
                         <div class="absolute inset-0 flex items-center justify-center z-20">
                             <h3 class="font-display text-3xl text-white font-bold tracking-tight drop-shadow-md">NOSSA <span class="font-light">CURADORIA</span></h3>
                         </div>
@@ -1580,7 +1581,7 @@
                 <div class="flex flex-col sm:flex-row bg-white rounded-md overflow-hidden group hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 border border-black/5" style="animation-delay: 200ms;">
                     <div class="w-full sm:w-1/2 relative overflow-hidden aspect-[4/3] sm:aspect-auto">
                         <div class="absolute inset-0 bg-dark/30 group-hover:bg-dark/10 transition-colors duration-700 z-10"></div>
-                        <img src="img/experiencia_amazon.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Experiência Amazon">
+                        <img decoding="async" src="img/experiencia_amazon.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-[cubic-bezier(0.33,1,0.68,1)]" alt="Experiência Amazon">
                         <div class="absolute inset-0 flex items-center justify-center z-20">
                             <h3 class="font-display text-3xl text-white font-bold tracking-tight drop-shadow-md">EXPERIÊNCIA <span class="font-light">AMAZON</span></h3>
                         </div>
