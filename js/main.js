@@ -247,4 +247,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             }
+            
+            // Mobile Sticky CTA Logic
+            const mobileStickyCta = document.getElementById('mobileStickyCta');
+            if (mobileStickyCta) {
+                window.addEventListener('scroll', () => {
+                    // Show CTA after scrolling past the first fold (Hero section)
+                    if (window.scrollY > window.innerHeight * 0.8) {
+                        mobileStickyCta.classList.remove('translate-y-full');
+                    } else {
+                        mobileStickyCta.classList.add('translate-y-full');
+                    }
+                });
+            }
         });
+
